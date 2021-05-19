@@ -1,0 +1,11 @@
+<h1>All the lost pets in Stockholm</h1>
+<ul>
+  <% @pets.each do |pet| %>
+    <li>
+      <%= pet.name %>
+      <%= pet.address %>
+      <%= pet.species %>
+      <%= link_to "see more", pet_path(pet) %>
+      </li>
+  <% end %>
+</ul>
